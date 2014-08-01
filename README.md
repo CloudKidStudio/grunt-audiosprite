@@ -7,7 +7,7 @@ grunt-audiosprite is a [Grunt](http://gruntjs.com) plugin which wraps our [audio
 To install, all this from your project folder:
 
 ```shell
-npm install CloudKidStudio/grunt-audiosprite
+npm install grunt-audiosprite
 ```
 
 ## Usage
