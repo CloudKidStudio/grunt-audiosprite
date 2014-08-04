@@ -1,6 +1,6 @@
 {
   "name": "grunt-audiosprite",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Grunt wrapper for audiosprite",
   "main": "./tasks/grunt-audiosprite.js",
   "author": {
