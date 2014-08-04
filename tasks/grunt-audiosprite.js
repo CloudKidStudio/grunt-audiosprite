@@ -26,12 +26,19 @@ module.exports = function(grunt)
 				'priority',
 				'export',
 				'log',
+				'loop',
 				'autoplay',
 				'silence',
 				'samplerate',
 				'channels',
 				'rawparts',
 				'bitrate'
+			];
+
+			// These can have arrays as values
+			var validArrayValues = [
+				'loop',
+				'export'
 			];
 
 			// These are the valid other options for this task
@@ -45,7 +52,14 @@ module.exports = function(grunt)
 			// Convert the data input into arguments for audiosprite
 			_.each(data, function (value, key, list) {
 				if (_.contains(validKeys, key)) {
-					cmd.push('--'+key, value);
+					if (_.contains(validArrayValues, key) && _.isArray(value)) {
+						value = value.join(',');
+					}
+					if (!_.isString(value) && !_.isNumber(value)) {
+						log.error("The audiosprite option '" + key + "' cannot be a " + (typeof key));
+					} else {
+						cmd.push('--'+key, value);
+					}
 				} else if (_.contains(otherKeys, key)) {
 					// Ignore these	
 				} else {
