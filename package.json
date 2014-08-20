@@ -1,6 +1,6 @@
 {
   "name": "grunt-audiosprite",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Grunt wrapper for audiosprite",
   "main": "./tasks/grunt-audiosprite.js",
   "author": {
@@ -13,7 +13,7 @@
     "url": "https://github.com/CloudKidStudio/grunt-audiosprite"
   },
   "dependencies": {
-    "audiosprite": "CloudKidStudio/audiosprite"
+    "cloudkid-audiosprite": "*"
   },
   "readmeFilename": "README.md",
   "bugs": {
