@@ -12,7 +12,7 @@ module.exports = function(grunt)
 		function() 
 		{
 			var data = this.data,
-				input = grunt.file.expand(data.input)
+				input = data.input && grunt.file.expand(data.input),
 				output = data.output || "output",
 				ogg_to_oga = data.ogg_to_oga || true,
 				cwd = data.cwd || process.cwd(),
