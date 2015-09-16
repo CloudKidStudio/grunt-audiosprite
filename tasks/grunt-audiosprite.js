@@ -12,6 +12,7 @@ module.exports = function(grunt)
 		function() 
 		{
 			var data = this.data,
+				input = data.input && grunt.file.expand(data.input),
 				output = data.output || "output",
 				ogg_to_oga = data.ogg_to_oga || true,
 				cwd = data.cwd || process.cwd(),
@@ -46,6 +47,7 @@ module.exports = function(grunt)
 				'cwd',
 				'callback',
 				'files',
+				'input',
 				'ogg_to_oga'
 			];
 
@@ -68,6 +70,7 @@ module.exports = function(grunt)
 			});
 
 			// Check for files, which is required!
+			files = input || files
 			if (!files)
 			{
 				log.error("Source files audio must be defined for the audiosprite");
