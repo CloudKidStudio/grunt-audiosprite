@@ -12,7 +12,7 @@ module.exports = function(grunt)
 		function() 
 		{
 			var data = this.data,
-				output = data.output || "output",
+				output = ('ogg_to_oga' in data) ? data.ogg_to_oga : true,
 				ogg_to_oga = data.ogg_to_oga || true,
 				cwd = data.cwd || process.cwd(),
 				callback = _.isFunction(data.callback) ? data.callback : function() {},
