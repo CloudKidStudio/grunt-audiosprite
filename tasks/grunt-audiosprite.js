@@ -18,7 +18,7 @@ module.exports = function(grunt)
 				cwd = data.cwd || process.cwd(),
 				callback = _.isFunction(data.callback) ? data.callback : function() {},
 				files = data.files,
-				cmd = [__dirname + '/../node_modules/.bin/audiosprite'],
+				cmd = [__dirname + '/../../../node_modules/.bin/audiosprite'],
 				done = this.async();
 
 			// These are the acceptable audiosprite arguemnts
